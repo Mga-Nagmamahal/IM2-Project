@@ -1,0 +1,89 @@
+/* =========================================
+   1. CSS VARIABLES
+   ========================================= */
+:root{
+  --bg:#e8e8e8; --card:#fff; --ink:#0f172a; --muted:#64748b; --line:#e2e8f0;
+  --field:#fff; --note:#f8fafc; --primary:#1e3fae; --primary-dark:#1a3596; --danger:#dc2626; --ok:#15803d;
+  --radius:12px;
+}
+
+/* =========================================
+   2. GLOBAL RESET AND BASE STYLES
+   ====================================a===== */
+*{box-sizing:border-box;margin:0}
+html,body{height:100%}
+body{font-family:'Inter',system-ui,-apple-system,'Segoe UI',sans-serif;background:var(--bg);color:var(--ink);
+  display:flex;align-items:center;justify-content:center;padding:24px;font-size:14px;line-height:1.5;-webkit-font-smoothing:antialiased}
+
+/* =========================================
+   3. MAIN CARD AND HEADING
+   ========================================= */
+.card{width:100%;max-width:420px;background:var(--card);border-radius:16px;padding:36px 32px 28px;
+  box-shadow:0 1px 2px rgba(15,23,42,.06),0 12px 32px rgba(15,23,42,.10)}
+.logo{width:44px;height:44px;margin:0 auto 14px;border-radius:12px;background:var(--primary);color:#fff;
+  display:grid;place-items:center;font-weight:700;font-size:18px}
+h1{text-align:center;font-size:22px;font-weight:700;letter-spacing:-.01em}
+.sub{text-align:center;color:var(--muted);font-size:13px;margin:4px 0 20px}
+
+/* =========================================
+   4. DEMO / INFORMATION BOX
+   ========================================= */
+.demo{background:var(--note);border:1px solid var(--line);border-radius:8px;padding:10px 12px;margin-bottom:20px;font-size:12px;color:var(--muted)}
+.demo strong{display:block;color:#475569;font-weight:600;margin-bottom:2px}
+
+/* =========================================
+   5. FORM FIELDS AND INPUTS
+   ========================================= */
+.field{margin-bottom:16px}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+label{display:block;font-size:13px;font-weight:600;margin-bottom:6px}
+.input{position:relative}
+input[type=email],input[type=password],input[type=text]{width:100%;height:42px;padding:0 12px;border:1px solid var(--line);
+  border-radius:8px;background:var(--field);font:inherit;color:var(--ink);transition:border-color .15s,box-shadow .15s}
+input::placeholder{color:#94a3b8}
+input:focus-visible{outline:none;border-color:var(--primary);box-shadow:0 0 0 3px rgba(30,63,174,.18)}
+input[aria-invalid=true]{border-color:var(--danger)}
+.input.has-icon input{padding-left:38px}
+.input .icon-btn{position:absolute;left:4px;top:50%;transform:translateY(-50%);width:32px;height:32px;border:0;background:none;
+  color:var(--muted);cursor:pointer;border-radius:6px;display:grid;place-items:center}
+.icon-btn:hover{color:var(--ink)}
+
+/* =========================================
+   6. VALIDATION MESSAGES AND HINTS
+   ========================================= */
+.error{color:var(--danger);font-size:12px;margin-top:4px;min-height:0}
+.hint{color:var(--muted);font-size:12px;margin-top:4px}
+
+/* =========================================
+   7. CHECKBOX, META ROW, AND LINKS
+   ========================================= */
+.meta{display:flex;justify-content:space-between;align-items:center;margin:2px 0 18px;font-size:12px;color:var(--muted)}
+.check{display:flex;align-items:center;gap:8px;font-size:12px;color:var(--muted);font-weight:400;margin:0}
+.check input{width:15px;height:15px;accent-color:var(--primary)}
+a{color:var(--primary);text-decoration:none;font-weight:600}
+a:hover{text-decoration:underline}
+.meta a{color:var(--muted);font-weight:400}
+
+/* =========================================
+   8. BUTTONS
+   ========================================= */
+.btn{width:100%;height:42px;border-radius:8px;font:inherit;font-weight:600;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:8px;transition:background .15s}
+.btn-primary{background:var(--primary);color:#fff;border:0;box-shadow:0 4px 10px rgba(30,63,174,.28)}
+.btn-primary:hover{background:var(--primary-dark)}
+.btn-ghost{background:#fff;color:var(--ink);border:1px solid var(--line);font-weight:500}
+.btn-ghost:hover{background:var(--note)}
+.divider{display:flex;align-items:center;gap:12px;margin:18px 0;color:var(--muted);font-size:12px}
+.divider::before,.divider::after{content:"";flex:1;height:1px;background:var(--line)}
+
+/* =========================================
+   9. FOOTER AND NOTICE
+   ========================================= */
+.foot{text-align:center;color:var(--muted);font-size:12px;margin-top:20px}
+.notice{display:none;background:#f0fdf4;border:1px solid #bbf7d0;color:var(--ok);border-radius:8px;padding:10px 12px;font-size:13px;margin-bottom:16px}
+.notice.show{display:block}
+
+/* =========================================
+   10. RESPONSIVE AND ACCESSIBILITY RULES
+   ========================================= */
+@media (max-width:480px){body{padding:12px;align-items:flex-start}.card{padding:28px 20px 22px}.row2{grid-template-columns:1fr}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
