@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard · Hope, Inc. ERP</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/styles.css" />
+  <link rel="stylesheet" href="../css/dashboard.css" />
+</head>
+<body>
+  <div class="erp-layout">
+    <!-- Left Sidebar (Dynamically populated based on Role & Rights) -->
+    <aside class="erp-sidebar">
+      <div class="sidebar-brand">
+        <div class="brand-logo">H</div>
+        <span class="brand-name">Hope, Inc. ERP</span>
+      </div>
+
+      <nav class="sidebar-nav" id="sidebar-nav">
+        <!-- Populated by js/dashboard.js -->
+      </nav>
+
+      <div class="sidebar-footer">
+        <label for="role-switcher" class="role-demo-label">Demo Role Switcher:</label>
+        <select id="role-switcher" class="role-switcher">
+          <option value="Superadmin">Superadmin (Michael)</option>
+          <option value="Admin">Admin (Lisa)</option>
+          <option value="User">User (Alex)</option>
+        </select>
+        <button id="logout-btn" class="btn-logout">Sign Out</button>
+      </div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="erp-main">
+      <!-- Top Header -->
+      <header class="erp-topbar">
+        <h1 class="page-title">Dashboard</h1>
+        <span class="role-badge" id="role-badge">SUPERADMIN</span>
+      </header>
+
+      <!-- Welcome Banner -->
+      <section class="welcome-banner">
+        <h2 id="welcome-heading">Welcome back, Michael!</h2>
+        <p id="welcome-subtext">You have full system access. You can manage all modules and assign roles to any user.</p>
+      </section>
+
+      <!-- 4 KPI Summary Cards -->
+      <section class="kpi-grid">
+        <div class="kpi-card">
+          <span class="kpi-label">Total Customers</span>
+          <div class="kpi-value" id="kpi-customers">82</div>
+          <span class="kpi-trend positive">↑ Active records</span>
+        </div>
+        <div class="kpi-card">
+          <span class="kpi-label">Products</span>
+          <div class="kpi-value" id="kpi-products">57</div>
+          <span class="kpi-trend positive">↑ Catalog items</span>
+        </div>
+        <div class="kpi-card">
+          <span class="kpi-label">Open Orders</span>
+          <div class="kpi-value" id="kpi-orders">124</div>
+          <span class="kpi-trend positive">↑ Active sales</span>
+        </div>
+        <div class="kpi-card">
+          <span class="kpi-label">Revenue (MTD)</span>
+          <div class="kpi-value" id="kpi-revenue">$84.2k</div>
+          <span class="kpi-trend positive">↑ Calculated from lines</span>
+        </div>
+      </section>
+
+      <!-- Quick Actions Grid -->
+      <section class="quick-actions-section">
+        <h3 class="section-heading">Quick Actions</h3>
+        <div class="quick-actions-grid" id="quick-actions-grid">
+          <!-- Populated by js/dashboard.js -->
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="../js/dashboard.js"></script>
+</body>
+</html>
