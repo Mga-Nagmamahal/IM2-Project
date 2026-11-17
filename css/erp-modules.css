@@ -239,3 +239,7 @@
   border-top: 1px solid var(--line);
   background: var(--surface);
 }
+
+.modal-dialog.modal-lg {
+  max-width: 720px;
+}
