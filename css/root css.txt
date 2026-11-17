@@ -1,0 +1,42 @@
+/* ==========================================================================
+   HOPE, INC. ERP — BASE THEME TOKENS (:root)
+   ========================================================================== */
+:root {
+  /* Brand & Accent */
+  --primary: #1e3fae;
+  --primary-dark: #1a3596;
+  --primary-light: #e0e7ff;
+
+  /* Neutrals & Surfaces */
+  --bg: #e8e8e8;
+  --surface: #f8fafc;      /* Replaces --note for consistency */
+  --card: #ffffff;
+  --field: #ffffff;
+  --ink: #0f172a;
+  --ink-secondary: #334155;
+  --muted: #64748b;
+  --line: #e2e8f0;
+
+  /* Semantic Status & Role Tokens */
+  --ok: #15803d;
+  --ok-bg: #dcfce7;
+  --ok-border: #bbf7d0;
+
+  --danger: #dc2626;
+  --danger-bg: #fee2e2;
+  --danger-border: #fecaca;
+
+  --warn: #92400e;
+  --warn-bg: #fef3c7;
+  --warn-border: #fde68a;
+
+  /* Borders, Shadows & Typography */
+  --radius-sm: 6px;
+  --radius-md: 8px;
+  --radius: 12px;
+  --radius-xl: 16px;
+  --shadow-sm: 0 1px 2px rgba(15, 23, 42, 0.06);
+  --shadow-md: 0 4px 12px rgba(15, 23, 42, 0.08);
+  --shadow-lg: 0 12px 32px rgba(15, 23, 42, 0.10);
+  --font-sans: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+}
